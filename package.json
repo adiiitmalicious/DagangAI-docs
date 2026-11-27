@@ -1,0 +1,21 @@
+{
+  "name": "dagangai-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "DagangAI V1.0 — AI-Powered Digital Marketing Workspace untuk UMKM & Ekonomi Kreatif",
+  "scripts": {
+    "dev": "pnpm -r --parallel dev",
+    "dev:api": "pnpm --filter @dagangai/api dev",
+    "dev:web": "pnpm --filter @dagangai/web dev",
+    "build": "pnpm -r build",
+    "typecheck": "pnpm -r typecheck",
+    "lint": "pnpm -r lint",
+    "db:migrate": "pnpm --filter @dagangai/api db:migrate",
+    "db:seed": "pnpm --filter @dagangai/api db:seed",
+    "db:setup": "pnpm db:migrate && pnpm db:seed"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=9.0.0"
+  }
+}
